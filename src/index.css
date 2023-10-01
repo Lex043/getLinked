@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: ClashDisplay;
+    src: url("./fonts/ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Regular.otf");
+}
