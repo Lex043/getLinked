@@ -1,12 +1,17 @@
+import instagram from "../assets/mdi_instagram.png";
+import twitter from "../assets/twitter.png";
+import facebook from "../assets/facebook.png";
+import linkedin from "../assets/ri_linkedin-fill.png";
+
 const Footer = () => {
     return (
-        <section>
+        <section className="px-4">
             <div>
                 <div>
-                    <h1>
-                        get<span>linked</span>
+                    <h1 className="font-clashDisplay font-bold text-xl">
+                        get<span className="text-[#d434fe]">linked</span>
                     </h1>
-                    <p>
+                    <p className="font-montserrat text-xs leading-5 py-2">
                         Getlinked Tech Hackathon is a technology innovation
                         program established by a group of organisations with the
                         aim of showcasing young and talented individuals in the
@@ -19,29 +24,44 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div>
-                <ul>
-                    <li>Useful Links</li>
-                    <li>Overview</li>
-                    <li>Timeline</li>
-                    <li>FAQs</li>
-                    <li>Register</li>
-                    <div>
-                        <li>Follow us</li>
-                        <div></div>
+            <div className="mt-4">
+                <ul className="font-montserrat">
+                    <li className="text-[#d434fe] font-semibold text-sm">
+                        Useful Links
+                    </li>
+                    <li className="text-sm py-1">Overview</li>
+                    <li className="text-sm py-1">Timeline</li>
+                    <li className="text-sm py-1">FAQs</li>
+                    <li className="text-sm py-1">Register</li>
+                    <div className="flex gap-3">
+                        <li className="text-xs text-[#d434fe] py-1">
+                            Follow us
+                        </li>
+                        <figure className="flex gap-3 items-center">
+                            <img src={instagram} alt="instagram" />
+                            <img src={twitter} alt="twitter" />
+                            <img src={facebook} alt="facebook" />
+                            <img src={linkedin} alt="linkedin" />
+                        </figure>
                     </div>
                 </ul>
             </div>
 
             <div>
-                <ul>
-                    <li>Contact Us</li>
-                    <li>+234 6707653444</li>
-                    <li>27, Alara Street Yaba 100012 Lagos State</li>
+                <ul className="font-montserrat">
+                    <li className="text-[#d434fe] font-semibold text-sm">
+                        Contact Us
+                    </li>
+                    <li className="text-xs py-1">+234 6707653444</li>
+                    <li className="text-xs py-1">
+                        27, Alara Street <br /> Yaba 100012 <br /> Lagos State
+                    </li>
                 </ul>
             </div>
 
-            <p>All rights reserved. getLinked Ltd.</p>
+            <p className="font-montserrat text-xs text-center my-10">
+                All rights reserved. getLinked Ltd.
+            </p>
         </section>
     );
 };

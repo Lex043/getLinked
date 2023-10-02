@@ -10,8 +10,7 @@ const Rules = () => {
                     Rules and <br />{" "}
                     <span className="text-[#d434fe]">Guidelines</span>
                 </h1>
-                <p className="font-montserrat text-xs pt-2 pb-8">
-                    {" "}
+                <p className="font-montserrat text-xs pt-2 pb-8 leading-6">
                     Our tech hackathon is a melting point of visionaries, and
                     its purpose is as clear as day: to shape the future. Whether
                     you are a coding genuis a design maverick, or a concept

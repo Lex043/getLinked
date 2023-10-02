@@ -12,7 +12,7 @@ const Criteria = () => {
                     <span className="text-[#d434fe]">Key attributes</span>
                 </h1>
 
-                <article className="font-montserrat text-xs">
+                <article className="font-montserrat text-xs leading-5">
                     <span className="text-[#d434fe]">
                         Innovation and Creativity:
                     </span>{" "}
@@ -20,14 +20,14 @@ const Criteria = () => {
                     consider whether it addresses a real-world problem in a
                     novel way or introduces innovative features
                 </article>
-                <article className="font-montserrat text-xs">
+                <article className="font-montserrat text-xs leading-5">
                     <span className="text-[#d434fe]">Functionality:</span>{" "}
                     Assess how well the solution works. Does it perform its
                     intended functions effectively and without major issues?
                     Judges would consider the completeness and robustness of the
                     solution.
                 </article>
-                <article className="font-montserrat text-xs">
+                <article className="font-montserrat text-xs leading-5">
                     <span className="text-[#d434fe]">
                         Impact and Relevance:
                     </span>{" "}
@@ -36,7 +36,7 @@ const Criteria = () => {
                     relevant to the target audience? Judges would assess
                     political socio economic or environmental benefits
                 </article>
-                <article className="font-montserrat text-xs">
+                <article className="font-montserrat text-xs leading-5">
                     <span className="text-[#d434fe]">
                         Technical Complexity:
                     </span>{" "}
@@ -45,7 +45,7 @@ const Criteria = () => {
                     advanced technologies or algorithms, and scalability of the
                     solution
                 </article>
-                <article className="font-montserrat text-xs">
+                <article className="font-montserrat text-xs leading-5">
                     <span className="text-[#d434fe]">
                         Adherence to Hackthon Rules:
                     </span>{" "}
