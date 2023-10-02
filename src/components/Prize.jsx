@@ -15,7 +15,7 @@ const Prize = () => {
                 </p>
             </div>
 
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-12 items-center justify-center">
                 <figure>
                     <img src={cup} alt="prize and rewards cup" />
                 </figure>

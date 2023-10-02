@@ -13,7 +13,7 @@ const Partners = () => {
                         major companies as its partners and sponsors
                     </p>
                 </div>
-                <figure className="">
+                <figure className="flex items-center justify-center">
                     <img src={partnersLogo} alt="partner and sponsors logo" />
                 </figure>
             </div>

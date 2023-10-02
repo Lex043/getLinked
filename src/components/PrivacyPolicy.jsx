@@ -71,7 +71,7 @@ const PrivacyPolicy = () => {
                 <img
                     src={privacyImg}
                     alt="an unlocked padlock"
-                    className="absolute bottom-[-8rem] right-6"
+                    className="absolute bottom-[-8rem]"
                 />
             </figure>
         </section>

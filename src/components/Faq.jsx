@@ -64,7 +64,7 @@ const Faq = () => {
                 </div>
             </div>
 
-            <figure>
+            <figure className="flex items-center justify-center">
                 <img src={faqImg} alt="frequently ask question img" />
             </figure>
         </section>
