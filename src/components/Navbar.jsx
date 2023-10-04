@@ -20,6 +20,7 @@ const Navbar = () => {
             mobileMenu.removeEventListener("click", toggleMenu);
         };
     }, []);
+
     return (
         <section>
             <section className="flex justify-between items-center border-b-[1px] border-b-white px-4 py-3">
@@ -36,13 +37,15 @@ const Navbar = () => {
                         <img src={menu} alt="hamburger" />
                     </figure>
 
-                    <nav className="hidden md:block">
+                    <nav className="hidden md:flex md:items-center md:gap-8 font-montserrat text-xs">
                         <a href="#">Timeline</a>
                         <a href="#">Overview</a>
                         <a href="#">FAQs</a>
                         <a href="#">Contact</a>
 
-                        <button>Register</button>
+                        <button className="w-[90px] bg-[#d434fe] text-white text-xs py-2 rounded-sm font-montserrat">
+                            Register
+                        </button>
                     </nav>
                 </div>
             </section>

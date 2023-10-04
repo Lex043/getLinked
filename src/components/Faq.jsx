@@ -3,9 +3,9 @@ import plus from "../assets/+.png";
 
 const Faq = () => {
     return (
-        <section className="border-b-[1px] border-white mt-4 pb-10">
-            <div className="flex flex-col items-center px-4">
-                <div className="text-center">
+        <section className="border-b-[1px] border-white mt-4 px-4 pb-10 md:flex md:justify-between">
+            <div className="flex flex-col items-center md:items-start md:w-[40%]">
+                <div className="text-center md:text-start">
                     <h1 className="text-xl font-bold font-clashDisplay">
                         Frequently Answer <br />{" "}
                         <span className="text-[#d434fe]">Question</span>
@@ -17,7 +17,7 @@ const Faq = () => {
                 </div>
 
                 <div className="mt-3">
-                    <div className="border-b-[1px] border-[#d434fe] py-3 flex items-end justify-between">
+                    <div className="border-b-[1px] border-[#d434fe] py-3 flex items-end gap-7">
                         <p className="text-xs">
                             Can I work on a project I started before the
                             hackathon?
@@ -65,7 +65,7 @@ const Faq = () => {
             </div>
 
             <figure className="flex items-center justify-center">
-                <img src={faqImg} alt="frequently ask question img" />
+                <img src={faqImg} alt="frequently ask question img " />
             </figure>
         </section>
     );

@@ -4,8 +4,8 @@ import arrow from "../assets/arrow.png";
 /* eslint-disable react/no-unescaped-entities */
 const Intro = () => {
     return (
-        <section className="mt-4 flex flex-col items-center gap-6">
-            <figure className=" px-4">
+        <section className="mt-4 md:py-14 flex flex-col md:flex-row md:justify-between items-center gap-6 border-b-[1px] border-white px-4 md:px">
+            <figure className="md:flex md:gap-2 md:items-end">
                 <img src={bigIdea} alt="The big idea" />
 
                 <div className="mt-3 flex items-center justify-center">
@@ -13,12 +13,12 @@ const Intro = () => {
                 </div>
             </figure>
 
-            <div className="text-center">
+            <div className="text-center md:text-start md:w-[50%]">
                 <h1 className="font-bold font-clashDisplay text-xl">
                     Introduction to getlinked <br />{" "}
                     <span className="text-[#d434fe]">tech Hackathon 1.0</span>
                 </h1>
-                <p className="font-montserrat text-xs pt-2 pb-10 px-4 border-b-[1px] border-white">
+                <p className="font-montserrat text-xs pt-3 pb-10 md:pb-0  leading-5">
                     Our tech hackathon is a melting point of visionaries, and
                     its purpose is as clear as day: to shape the future. Whether
                     you are a coding genuis a design maverick, or a concept

@@ -2,11 +2,11 @@ import criteriaImg from "../assets/8046554 1.png";
 
 const Criteria = () => {
     return (
-        <section className="mt-5 border-b-[1px] border-white flex flex-col items-center">
+        <section className="mt-5 md:py-12 px-4 border-b-[1px] border-white flex flex-col md:flex-row md:justify-between items-center">
             <figure>
                 <img src={criteriaImg} alt="criteria img" />
             </figure>
-            <div className="text-center flex flex-col gap-4 px-4 pb-10">
+            <div className="text-center md:text-start flex flex-col gap-4 md:gap-1 pb-10 md:pb-0 md:w-[50%]">
                 <h1 className="text-xl font-clashDisplay font-bold">
                     Judging Criteria <br />{" "}
                     <span className="text-[#d434fe]">Key attributes</span>

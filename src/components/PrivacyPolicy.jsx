@@ -4,9 +4,9 @@ import listItem from "../assets/list terms.png";
 
 const PrivacyPolicy = () => {
     return (
-        <section className="px-4 mt-14 pb-48">
-            <div>
-                <header className="text-center">
+        <section className="px-4 mt-14 pb-48 md:flex md:justify-between">
+            <div className="md:w-[50%]">
+                <header className="text-center md:text-start">
                     <h1 className="font-clashDisplay text-xl font-bold">
                         Privacy Policy and <br />{" "}
                         <span className="text-[#d434fe]">Terms</span>
@@ -16,13 +16,13 @@ const PrivacyPolicy = () => {
                     </p>
                 </header>
 
-                <p className="font-montserrat text-xs py-2 text-center">
+                <p className="font-montserrat text-xs py-2 text-center md:text-start">
                     Below are our privacy & policy, which outline a lot of
                     goodies. it&apos s our aim to always take our participant
                 </p>
 
                 <div className="border-[1px] px-4 py-8 mt-6 border-[#d434fe]">
-                    <p className="font-montserrat text-xs py-2 text-center leading-6">
+                    <p className="font-montserrat text-xs py-2 text-center md:text-start leading-6">
                         At getlinked tech Hackathon 1.0, we value your privacy
                         and we are committed to protecting your personal
                         information. This Privacy Policy outlines how we
@@ -71,7 +71,7 @@ const PrivacyPolicy = () => {
                 <img
                     src={privacyImg}
                     alt="an unlocked padlock"
-                    className="absolute bottom-[-8rem]"
+                    className="absolute bottom-[-8rem] md:bottom-[1rem]"
                 />
             </figure>
         </section>

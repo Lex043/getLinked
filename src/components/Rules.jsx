@@ -4,8 +4,8 @@ import rulesImg from "../assets/7450159 1.png";
 
 const Rules = () => {
     return (
-        <section className="flex flex-col-reverse items-center border-b-[1px] border-white">
-            <div className="px-4 text-center">
+        <section className="flex flex-col-reverse md:flex-row md:justify-between items-center border-b-[1px] border-white px-4">
+            <div className="text-center md:text-start md:w-[55%]">
                 <h1 className="font-clashDisplay font-bold text-xl">
                     Rules and <br />{" "}
                     <span className="text-[#d434fe]">Guidelines</span>
