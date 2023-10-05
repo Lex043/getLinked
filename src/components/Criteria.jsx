@@ -2,12 +2,12 @@ import criteriaImg from "../assets/8046554 1.png";
 
 const Criteria = () => {
     return (
-        <section className="mt-5 md:py-12 px-4 border-b-[1px] border-white flex flex-col md:flex-row md:justify-between items-center">
+        <section className="mt-5 flex flex-col items-center border-b-[1px] border-gray-700 px-4 lg:px-12 md:flex-row md:justify-between md:py-12">
             <figure>
                 <img src={criteriaImg} alt="criteria img" />
             </figure>
-            <div className="text-center md:text-start flex flex-col gap-4 md:gap-1 pb-10 md:pb-0 md:w-[50%]">
-                <h1 className="text-xl font-clashDisplay font-bold">
+            <div className="flex flex-col gap-4 pb-10 text-center md:w-[50%] md:gap-5 md:pb-0 md:text-start">
+                <h1 className="font-clashDisplay text-xl font-bold">
                     Judging Criteria <br />{" "}
                     <span className="text-[#d434fe]">Key attributes</span>
                 </h1>
@@ -55,7 +55,7 @@ const Criteria = () => {
                     competition-specific requirements
                 </article>
 
-                <button className="w-[90px] bg-[#d434fe] text-white py-1 rounded-sm mx-auto">
+                <button className="mx-auto w-[90px] rounded-sm bg-gradient-to-r from-[#d434fe] via-[#d434fe] to-[#903aff] py-2 font-montserrat text-xs text-white">
                     Read More
                 </button>
             </div>

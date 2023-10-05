@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Button from "./Button";
 import menu from "../assets/menu.png";
 
 const Navbar = () => {
@@ -23,8 +24,8 @@ const Navbar = () => {
 
     return (
         <section>
-            <section className="flex justify-between items-center border-b-[1px] border-b-white px-4 py-3">
-                <div className="font-bold font-clashDisplay text-2xl">
+            <section className="flex items-center justify-between border-b-[1px] border-gray-700 px-4 lg:px-16 py-3 md:py-4">
+                <div className="font-clashDisplay text-2xl lg:text-3xl">
                     <span>get</span>
                     <span className="text-[#d434fe]">linked</span>
                 </div>
@@ -32,30 +33,28 @@ const Navbar = () => {
                 <div>
                     <figure
                         id="hamburger-button"
-                        className="md:hidden cursor-pointer"
+                        className="cursor-pointer md:hidden"
                     >
                         <img src={menu} alt="hamburger" />
                     </figure>
 
-                    <nav className="hidden md:flex md:items-center md:gap-8 font-montserrat text-xs">
+                    <nav className="hidden font-montserrat text-xs lg:text-sm md:flex md:items-center md:gap-8">
                         <a href="#">Timeline</a>
                         <a href="#">Overview</a>
                         <a href="#">FAQs</a>
                         <a href="#">Contact</a>
 
-                        <button className="w-[90px] bg-[#d434fe] text-white text-xs py-2 rounded-sm font-montserrat">
-                            Register
-                        </button>
+                        <Button>Register</Button>
                     </nav>
                 </div>
             </section>
 
             <section
                 id="mobile-menu"
-                className="absolute top-0 bg-[#150e28] w-full text-x flex-col origin-top animate-open-menu hidden"
+                className="text-x absolute top-0 hidden w-full origin-top animate-open-menu flex-col bg-[#150e28]"
             >
-                <button className="text-4xl self-end px-4">&times;</button>
-                <nav className="flex flex-col pl-2 min-h-screen md:block">
+                <button className="self-end px-4 text-4xl">&times;</button>
+                <nav className="flex min-h-screen flex-col pl-2 md:block">
                     <a href="#" className="w-full py-2 text-start">
                         Timeline
                     </a>
@@ -69,7 +68,7 @@ const Navbar = () => {
                         Contact
                     </a>
 
-                    <button className="w-[90px] bg-[#d434fe] text-white py-1 rounded-sm">
+                    <button className="w-[90px] rounded-sm bg-[#d434fe] py-1 text-white">
                         Register
                     </button>
                 </nav>

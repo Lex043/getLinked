@@ -23,7 +23,8 @@ export default {
 
         fontFamily: {
             montserrat: ["Montserrat", "sans-serif"],
-            clashDisplay: ["ClashDisplay"],
+            clashDisplay: ["ClashDisplay", "sans-serif"],
+            unica: ["Unica One", "cursive"],
         },
     },
     plugins: [],

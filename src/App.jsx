@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
     return (
-        <main className="min-h-screen flex flex-col justify-center bg-[#150e28] text-white">
+        <main className="flex min-h-screen flex-col justify-center bg-[#150e28] text-white">
             <Navbar />
             <Hero />
             <Intro />

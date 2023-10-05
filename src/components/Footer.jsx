@@ -5,14 +5,14 @@ import linkedin from "../assets/ri_linkedin-fill.png";
 
 const Footer = () => {
     return (
-        <section className="px-4">
+        <section className="px-4 lg:px-12">
             <div className="md:flex md:justify-between">
                 <div className="md:w-[50%]">
                     <div>
-                        <h1 className="font-clashDisplay font-bold text-xl">
+                        <h1 className="font-clashDisplay text-xl font-bold">
                             get<span className="text-[#d434fe]">linked</span>
                         </h1>
-                        <p className="font-montserrat text-xs leading-5 py-2">
+                        <p className="py-2 font-montserrat text-xs leading-5">
                             Getlinked Tech Hackathon is a technology innovation
                             program established by a group of organisations with
                             the aim of showcasing young and talented individuals
@@ -20,33 +20,33 @@ const Footer = () => {
                         </p>
                     </div>
 
-                    <div className="md:mt-6">
+                    <div className="text-xs md:mt-6">
                         <h1>Terms of Use | Privacy Policy</h1>
                     </div>
                 </div>
 
                 <div className="mt-4 md:mt-0">
                     <ul className="font-montserrat">
-                        <li className="text-[#d434fe] font-semibold text-sm">
+                        <li className="text-sm font-semibold text-[#d434fe]">
                             Useful Links
                         </li>
-                        <li className="text-sm py-1 md:py-2 md:text-xs">
+                        <li className="py-1 text-sm md:py-2 md:text-xs">
                             Overview
                         </li>
-                        <li className="text-sm py-1 md:py-2 md:text-xs">
+                        <li className="py-1 text-sm md:py-2 md:text-xs">
                             Timeline
                         </li>
-                        <li className="text-sm py-1 md:py-2 md:text-xs">
+                        <li className="py-1 text-sm md:py-2 md:text-xs">
                             FAQs
                         </li>
-                        <li className="text-sm py-1 md:py-2 md:text-xs">
+                        <li className="py-1 text-sm md:py-2 md:text-xs">
                             Register
                         </li>
                         <div className="flex gap-3">
-                            <li className="text-xs text-[#d434fe] py-1">
+                            <li className="py-1 text-xs text-[#d434fe]">
                                 Follow us
                             </li>
-                            <figure className="flex gap-3 items-center">
+                            <figure className="flex items-center gap-3">
                                 <img src={instagram} alt="instagram" />
                                 <img src={twitter} alt="twitter" />
                                 <img src={facebook} alt="facebook" />
@@ -58,11 +58,11 @@ const Footer = () => {
 
                 <div className="">
                     <ul className="font-montserrat">
-                        <li className="text-[#d434fe] font-semibold text-sm">
+                        <li className="text-sm font-semibold text-[#d434fe]">
                             Contact Us
                         </li>
-                        <li className="text-xs py-1">+234 6707653444</li>
-                        <li className="text-xs py-1">
+                        <li className="py-1 text-xs">+234 6707653444</li>
+                        <li className="py-1 text-xs">
                             27, Alara Street <br /> Yaba 100012 <br /> Lagos
                             State
                         </li>
@@ -70,7 +70,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <p className="font-montserrat text-xs text-center my-10">
+            <p className="my-10 text-center font-montserrat text-xs">
                 All rights reserved. getLinked Ltd.
             </p>
         </section>

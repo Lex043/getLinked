@@ -2,27 +2,29 @@ import privacyImg from "../assets/08 1.png";
 import shield from "../assets/Vector (2).png";
 import listItem from "../assets/list terms.png";
 
+import Button from "./Button";
+
 const PrivacyPolicy = () => {
     return (
-        <section className="px-4 mt-14 pb-48 md:flex md:justify-between">
+        <section className="mt-14 px-4 lg:px-12 pb-48 md:flex md:justify-between">
             <div className="md:w-[50%]">
                 <header className="text-center md:text-start">
                     <h1 className="font-clashDisplay text-xl font-bold">
                         Privacy Policy and <br />{" "}
                         <span className="text-[#d434fe]">Terms</span>
                     </h1>
-                    <p className="font-montserrat text-xs py-2">
+                    <p className="py-2 font-montserrat text-xs">
                         Last updated on september 12, 2023
                     </p>
                 </header>
 
-                <p className="font-montserrat text-xs py-2 text-center md:text-start">
+                <p className="py-2 text-center font-montserrat text-xs md:text-start">
                     Below are our privacy & policy, which outline a lot of
                     goodies. it&apos s our aim to always take our participant
                 </p>
 
-                <div className="border-[1px] px-4 py-8 mt-6 border-[#d434fe]">
-                    <p className="font-montserrat text-xs py-2 text-center md:text-start leading-6">
+                <div className="mt-6 border-[1px] border-[#d434fe] px-4 py-8">
+                    <p className="py-2 text-center font-montserrat text-xs leading-6 md:text-start">
                         At getlinked tech Hackathon 1.0, we value your privacy
                         and we are committed to protecting your personal
                         information. This Privacy Policy outlines how we
@@ -34,15 +36,15 @@ const PrivacyPolicy = () => {
 
                     <div>
                         <div className="font-montserrat font-bold">
-                            <h1 className="text-[#d434fe] text-sm">
+                            <h1 className="text-sm text-[#d434fe]">
                                 Licensing Policy
                             </h1>
-                            <h3 className="text-xs py-2">
+                            <h3 className="py-2 text-xs">
                                 Here are terms of our Standard License:
                             </h3>
                         </div>
 
-                        <div className="font-montserrat text-xs flex flex-col gap-4 mt-4">
+                        <div className="mt-4 flex flex-col items-center gap-4 font-montserrat text-xs">
                             <div className="flex items-start gap-4">
                                 <img src={listItem} alt="list item" />
                                 <p>
@@ -60,13 +62,14 @@ const PrivacyPolicy = () => {
                                     development
                                 </p>
                             </div>
-                            <button>Read More</button>
+
+                            <Button>Read More</Button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <figure className="mt-8 flex flex-col items-center justify-center relative">
+            <figure className="relative mt-8 flex flex-col items-center justify-center">
                 <img src={shield} alt="shield" />
                 <img
                     src={privacyImg}
