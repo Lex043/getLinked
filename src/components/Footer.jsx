@@ -6,7 +6,7 @@ import linkedin from "../assets/ri_linkedin-fill.png";
 const Footer = () => {
     return (
         <section className="px-4 lg:px-12">
-            <div className="md:flex md:justify-between">
+            <div className="md:flex md:justify-between lg:w-[75%] lg:mx-auto">
                 <div className="md:w-[50%]">
                     <div>
                         <h1 className="font-clashDisplay text-xl font-bold">
