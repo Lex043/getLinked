@@ -1,17 +1,17 @@
-import rulesImg from "../assets/7450159 1.png";
+import rulesImg from "../assets/rulesImg.png";
 
 /* eslint-disable react/no-unescaped-entities */
 
 const Rules = () => {
     return (
-        <section className="border-b-[1px] border-gray-700 px-4 lg:px-16 ">
-            <div className="flex flex-col-reverse items-center md:flex-row md:justify-between lg:w-[80%] lg:mx-auto">
-                <div className="text-center md:w-[55%] md:text-start">
-                    <h1 className="font-clashDisplay text-xl lg:text-2xl">
+        <section className="border-b-[1px] border-gray-700 px-4 lg:px-20 ">
+            <div className="flex flex-col-reverse items-center lg:flex-row lg:gap-[3rem]">
+                <div className="text-center lg:w-[50%] lg:text-start">
+                    <h1 className="font-clashDisplay text-xl lg:text-3xl">
                         Rules and <br />{" "}
                         <span className="text-[#d434fe]">Guidelines</span>
                     </h1>
-                    <p className="pb-8 pt-2 font-montserrat text-xs lg:text-sm leading-6">
+                    <p className="pb-8 pt-2 lg:pt-4 font-montserrat text-xs lg:text-sm leading-6 lg:leading-7">
                         Our tech hackathon is a melting point of visionaries,
                         and its purpose is as clear as day: to shape the future.
                         Whether you are a coding genuis a design maverick, or a
@@ -22,7 +22,11 @@ const Rules = () => {
                     </p>
                 </div>
                 <figure>
-                    <img src={rulesImg} alt="rules and guidelines" />
+                    <img
+                        src={rulesImg}
+                        alt="rules and guidelines"
+                        className="lg:h-[606px] lg:w-[650px] object-cover"
+                    />
                 </figure>
             </div>
         </section>

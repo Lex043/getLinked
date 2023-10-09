@@ -5,10 +5,10 @@ const Partners = () => {
         <section className="mt-5 border-b-[1px] border-gray-700 pb-16">
             <div className="px-4 lg:w-[90%] lg:mx-auto">
                 <div className="text-center md:mx-auto md:w-[50%] lg:w-[35%]">
-                    <h1 className="font-clashDisplay text-xl lg:text-2xl">
+                    <h1 className="font-clashDisplay text-xl md:text-2xl">
                         Partners and Sponsors
                     </h1>
-                    <p className="pb-10 pt-2 font-montserrat text-xs leading-5">
+                    <p className="pb-10 pt-2 font-montserrat text-xs md:text-sm leading-5">
                         Getlinked Hackathon 1.0 is honored to have the following
                         major companies as its partners and sponsors
                     </p>

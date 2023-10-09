@@ -5,14 +5,14 @@ import linkedin from "../assets/ri_linkedin-fill.png";
 
 const Footer = () => {
     return (
-        <section className="px-4 lg:px-12">
-            <div className="md:flex md:justify-between lg:w-[75%] lg:mx-auto">
+        <section className="px-4 lg:px-12 bg-[#110B21] py-10">
+            <div className="lg:flex lg:justify-between">
                 <div className="md:w-[50%]">
                     <div>
-                        <h1 className="font-clashDisplay text-xl font-bold">
+                        <h1 className="font-clashDisplay text-xl lg:text-3xl font-bold">
                             get<span className="text-[#d434fe]">linked</span>
                         </h1>
-                        <p className="py-2 font-montserrat text-xs leading-5">
+                        <p className="py-2 font-montserrat text-xs lg:text-sm leading-5">
                             Getlinked Tech Hackathon is a technology innovation
                             program established by a group of organisations with
                             the aim of showcasing young and talented individuals
@@ -27,7 +27,7 @@ const Footer = () => {
 
                 <div className="mt-4 md:mt-0">
                     <ul className="font-montserrat">
-                        <li className="text-sm font-semibold text-[#d434fe]">
+                        <li className="text-sm lg:text-base font-semibold text-[#d434fe]">
                             Useful Links
                         </li>
                         <li className="py-1 text-sm md:py-2 md:text-xs">
@@ -58,7 +58,7 @@ const Footer = () => {
 
                 <div className="">
                     <ul className="font-montserrat">
-                        <li className="text-sm font-semibold text-[#d434fe]">
+                        <li className="text-sm lg:text-base font-semibold text-[#d434fe]">
                             Contact Us
                         </li>
                         <li className="py-1 text-xs">+234 6707653444</li>
@@ -70,7 +70,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <p className="my-10 text-center font-montserrat text-xs">
+            <p className="pt-10 text-center font-montserrat text-xs">
                 All rights reserved. getLinked Ltd.
             </p>
         </section>
