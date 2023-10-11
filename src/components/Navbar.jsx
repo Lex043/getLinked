@@ -44,7 +44,9 @@ const Navbar = () => {
                         <a href="#">FAQs</a>
                         <a href="#">Contact</a>
 
-                        <Button>Register</Button>
+                        <div className="ml-10">
+                            <Button>Register</Button>
+                        </div>
                     </nav>
                 </div>
             </section>

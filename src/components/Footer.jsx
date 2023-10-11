@@ -5,7 +5,7 @@ import linkedin from "../assets/ri_linkedin-fill.png";
 
 const Footer = () => {
     return (
-        <section className="px-4 lg:px-12 bg-[#110B21] py-10">
+        <section className="px-4 lg:px-[10rem] bg-[#110B21] py-10">
             <div className="lg:flex lg:justify-between">
                 <div className="md:w-[50%]">
                     <div>
@@ -70,8 +70,8 @@ const Footer = () => {
                 </div>
             </div>
 
-            <p className="pt-10 text-center font-montserrat text-xs">
-                All rights reserved. getLinked Ltd.
+            <p className="pt-10 text-center font-montserrat text-xs lg:text-sm">
+                All rights reserved. <span>&copy;</span> getLinked Ltd.
             </p>
         </section>
     );

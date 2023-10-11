@@ -11,14 +11,14 @@ const Faq = () => {
                             Frequently Ask <br />{" "}
                             <span className="text-[#d434fe]">Question</span>
                         </h1>
-                        <p className="pt-2 font-montserrat text-xs md:text-sm leading-5">
+                        <p className="pt-4 font-montserrat text-xs md:text-sm leading-5">
                             We got answers to the questions that you might want
                             to ask about{" "}
                             <strong>getlinked Hackathon 1.0</strong>
                         </p>
                     </div>
 
-                    <div className="mt-3">
+                    <div className="mt-10 flex flex-col gap-4">
                         <div className="flex items-end gap-7 border-b-[1px] border-[#d434fe] py-3">
                             <p className="text-xs md:text-sm">
                                 Can I work on a project I started before the

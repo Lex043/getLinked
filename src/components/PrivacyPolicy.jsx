@@ -6,27 +6,27 @@ import Button from "./Button";
 
 const PrivacyPolicy = () => {
     return (
-        <section className="mt-14 px-4 lg:px-12 pb-48">
-            <div className="md:flex md:justify-between lg:w-[80%] lg:mx-auto">
-                <div className="md:w-[50%]">
+        <section className="mt-14 px-4 lg:pl-[9rem] pb-48">
+            <div className="flex flex-col items-center lg:items-start gap-6 lg:flex-row lg:gap-[8rem]">
+                <div className="md:w-[70%] lg:w-[40%]">
                     <header className="text-center md:text-start">
                         <h1 className="font-clashDisplay text-xl lg:text-2xl">
                             Privacy Policy and <br />{" "}
                             <span className="text-[#d434fe]">Terms</span>
                         </h1>
-                        <p className="py-2 font-montserrat text-xs lg:text-sm">
+                        <p className="pt-5 font-montserrat text-xs lg:text-sm">
                             Last updated on september 12, 2023
                         </p>
                     </header>
 
-                    <p className="py-2 text-center font-montserrat text-xs lg:text-sm md:text-start">
+                    <p className="pt-5 text-center font-montserrat text-xs lg:text-sm md:text-start">
                         Below are our privacy & policy, which outline a lot of
                         goodies. it&apos s our aim to always take our
                         participant
                     </p>
 
-                    <div className="mt-6 border-[1px] border-[#d434fe] px-4 lg:px-14 py-8">
-                        <p className="py-2 text-center font-montserrat text-xs leading-6 md:text-start">
+                    <div className="mt-12 lg:mt-12 border-[1px] border-[#d434fe] px-4 lg:px-14 py-8">
+                        <p className="py-2 text-center font-montserrat text-xs lg:text-sm leading-6 lg:leading-7 md:text-start">
                             At getlinked tech Hackathon 1.0, we value your
                             privacy and we are committed to protecting your
                             personal information. This Privacy Policy outlines
@@ -38,7 +38,7 @@ const PrivacyPolicy = () => {
 
                         <div>
                             <div className="font-montserrat font-bold">
-                                <h1 className="text-sm text-[#d434fe]">
+                                <h1 className="text-sm lg:text-base text-[#d434fe]">
                                     Licensing Policy
                                 </h1>
                                 <h3 className="py-2 text-xs">
@@ -76,7 +76,7 @@ const PrivacyPolicy = () => {
                     <img
                         src={privacyImg}
                         alt="an unlocked padlock"
-                        className="absolute bottom-[-8rem] md:bottom-[1rem]"
+                        className="absolute md:right-10 bottom-[-8rem] md:bottom-[-10rem]"
                     />
                 </figure>
             </div>

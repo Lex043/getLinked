@@ -1,4 +1,5 @@
 import heroImg from "../assets/man-wearing-smart-glasses-touching-virtual-screen 1.png";
+import heroDsgn from "../assets/Image 1.png";
 import underlineDsg from "../assets/Vector 4.png";
 import lightSpark from "../assets/1f4a5.png";
 import chain from "../assets/chain-9365116-7621444.png";
@@ -21,7 +22,7 @@ const Hero = () => {
             </div>
 
             <section className="mt-16 flex flex-col md:mt-8 md:flex-row md:items-center md:justify-between">
-                <div className="text-center md:text-start px-4 lg:pl-16">
+                <div className="text-center md:text-start px-4 lg:pl-20">
                     <div className="flex items-end justify-center md:justify-start relative">
                         <h1 className="font-clashDisplay text-2xl lg:text-6xl md:text-4xl relative">
                             getlinked Tech <br /> Hackaction{" "}
@@ -51,7 +52,12 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <figure>
+                <figure className="relative">
+                    <img
+                        src={heroDsgn}
+                        alt="hero design"
+                        className="absolute lg:h-[600px]"
+                    />
                     <img
                         src={heroImg}
                         alt="man wearing smart glasses touching virtual screen"
