@@ -2,6 +2,8 @@ import instagram from "../assets/mdi_instagram.png";
 import twitter from "../assets/twitter.png";
 import facebook from "../assets/facebook.png";
 import linkedin from "../assets/ri_linkedin-fill.png";
+import dialerIcon from "../assets/dialerIcon.png";
+import locationIcon from "../assets/locationIcon (1).png";
 
 const Footer = () => {
     return (
@@ -25,7 +27,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="mt-4 md:mt-0">
+                <div className="mt-4 lg:mt-0">
                     <ul className="font-montserrat">
                         <li className="text-sm lg:text-base font-semibold text-[#d434fe]">
                             Useful Links
@@ -56,13 +58,23 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className="">
+                <div className="mt-4 lg:mt-0">
                     <ul className="font-montserrat">
                         <li className="text-sm lg:text-base font-semibold text-[#d434fe]">
                             Contact Us
                         </li>
-                        <li className="py-1 text-xs">+234 6707653444</li>
-                        <li className="py-1 text-xs">
+                        <li className="py-1 md:py-2 text-xs flex gap-2 items-center">
+                            {" "}
+                            <span>
+                                <img src={dialerIcon} alt="Dialer Icon" />
+                            </span>
+                            +234 6707653444
+                        </li>
+                        <li className="py-1 md:py-2 text-xs flex gap-2 items-start">
+                            {" "}
+                            <span>
+                                <img src={locationIcon} alt="location icon" />
+                            </span>
                             27, Alara Street <br /> Yaba 100012 <br /> Lagos
                             State
                         </li>

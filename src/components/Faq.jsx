@@ -1,5 +1,6 @@
 import faqImg from "../assets/faqImg.png";
 import plus from "../assets/+.png";
+import questionMark from "../assets/_ (2).png";
 
 const Faq = () => {
     return (
@@ -67,7 +68,24 @@ const Faq = () => {
                     </div>
                 </div>
 
-                <figure className="flex items-center justify-center">
+                <figure className="flex flex-col items-center justify-center">
+                    <div className="flex relative">
+                        <img
+                            src={questionMark}
+                            alt="Question Mark"
+                            className="w-5 object-contain absolute right-[7rem] top-10"
+                        />
+                        <img
+                            src={questionMark}
+                            alt="Question Mark"
+                            className="w-10 object-contain"
+                        />
+                        <img
+                            src={questionMark}
+                            alt="Question Mark"
+                            className="w-5 object-contain"
+                        />
+                    </div>
                     <img
                         src={faqImg}
                         alt="frequently ask question img"

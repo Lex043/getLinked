@@ -53,7 +53,7 @@ const Navbar = () => {
 
             <section
                 id="mobile-menu"
-                className="text-x absolute top-0 hidden w-full origin-top animate-open-menu flex-col bg-[#150e28]"
+                className="text-x absolute top-0 hidden w-full origin-top animate-open-menu flex-col bg-[#150e28] z-50"
             >
                 <button className="self-end px-4 text-4xl">&times;</button>
                 <nav className="flex min-h-screen flex-col pl-2 md:block">
