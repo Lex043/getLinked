@@ -9,7 +9,7 @@ import Button from "./Button";
 
 const Hero = () => {
     return (
-        <section className="mt-4 border-b-[1px] border-gray-700">
+        <section className="pt-4 border-t-[1px]  border-b-[1px] border-gray-700">
             <h1 className="flex justify-end font-montserrat text-[15px] font-bold italic md:text-xl px-4 lg:px-12">
                 Igniting a Revolution in HR Innovation
             </h1>

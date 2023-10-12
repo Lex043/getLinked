@@ -1,29 +1,19 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Intro from "./components/Intro";
-import Rules from "./components/Rules";
-import Criteria from "./components/Criteria";
-import Faq from "./components/Faq";
-import Timeline from "./components/Timeline";
-import Prize from "./components/Prize";
-import Partners from "./components/Partners";
-import PrivacyPolicy from "./components/PrivacyPolicy";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
     return (
-        <main className="flex min-h-screen flex-col justify-center bg-[#150e28] text-white">
-            <Navbar />
-            <Hero />
-            <Intro />
-            <Rules />
-            <Criteria />
-            <Faq />
-            <Timeline />
-            <Prize />
-            <Partners />
-            <PrivacyPolicy />
-            <Footer />
+        <main className="min-h-screen bg-[#150e28] text-white">
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="register" element={<Register />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
         </main>
     );
 };

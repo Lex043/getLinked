@@ -69,21 +69,21 @@ const Faq = () => {
                 </div>
 
                 <figure className="flex flex-col items-center justify-center">
-                    <div className="flex relative">
+                    <div className="flex items-end gap-10 md:gap-14 mr-24 md:mr-32 relative top-6 lg:top-0">
                         <img
                             src={questionMark}
                             alt="Question Mark"
-                            className="w-5 object-contain absolute right-[7rem] top-10"
+                            className="w-5 lg:w-10 object-contain"
                         />
                         <img
                             src={questionMark}
                             alt="Question Mark"
-                            className="w-10 object-contain"
+                            className="w-10 lg:w-16"
                         />
                         <img
                             src={questionMark}
                             alt="Question Mark"
-                            className="w-5 object-contain"
+                            className="w-5 lg:w-10 object-contain"
                         />
                     </div>
                     <img

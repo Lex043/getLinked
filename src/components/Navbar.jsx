@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Button from "./Button";
 import menu from "../assets/menu.png";
 
@@ -24,11 +25,11 @@ const Navbar = () => {
 
     return (
         <section>
-            <section className="flex items-center justify-between border-b-[1px] border-gray-700 px-4 lg:px-16 py-3 md:py-4">
-                <div className="font-clashDisplay text-2xl lg:text-3xl">
+            <section className="flex items-center justify-between px-4 lg:px-16 py-3 md:py-4">
+                <Link to="/" className="font-clashDisplay text-2xl lg:text-3xl">
                     <span>get</span>
                     <span className="text-[#d434fe]">linked</span>
-                </div>
+                </Link>
 
                 <div>
                     <figure
@@ -42,11 +43,11 @@ const Navbar = () => {
                         <a href="#">Timeline</a>
                         <a href="#">Overview</a>
                         <a href="#">FAQs</a>
-                        <a href="#">Contact</a>
+                        <Link to="/contact">Contact</Link>
 
-                        <div className="ml-10">
+                        <Link to="/register" className="ml-10">
                             <Button>Register</Button>
-                        </div>
+                        </Link>
                     </nav>
                 </div>
             </section>
@@ -56,7 +57,7 @@ const Navbar = () => {
                 className="text-x absolute top-0 hidden w-full origin-top animate-open-menu flex-col bg-[#150e28] z-50"
             >
                 <button className="self-end px-4 text-4xl">&times;</button>
-                <nav className="flex min-h-screen flex-col pl-2 md:block">
+                <nav className="flex min-h-screen flex-col pl-4 md:block">
                     <a href="#" className="w-full py-2 text-start">
                         Timeline
                     </a>
@@ -66,13 +67,17 @@ const Navbar = () => {
                     <a href="#" className="w-full py-2 text-start">
                         FAQs
                     </a>
-                    <a href="#" className="w-full py-2 text-start">
-                        Contact
-                    </a>
 
-                    <button className="w-[90px] rounded-sm bg-[#d434fe] py-1 text-white">
+                    <Link to="/contact" className="w-full py-2 text-start">
+                        Contact
+                    </Link>
+
+                    <Link
+                        to="/register"
+                        className="w-28 rounded-sm mt-2  bg-gradient-to-r from-[#d434fe] via-[#d434fe] to-[#903aff] py-2 text-white text-center"
+                    >
                         Register
-                    </button>
+                    </Link>
                 </nav>
             </section>
         </section>
