@@ -1,6 +1,7 @@
 import privacyImg from "../assets/08 1.png";
 import shield from "../assets/Vector (2).png";
 import listItem from "../assets/list terms.png";
+import star from "../assets/star pu.png";
 
 import Button from "./Button";
 
@@ -19,11 +20,18 @@ const PrivacyPolicy = () => {
                         </p>
                     </header>
 
-                    <p className="pt-5 text-center font-montserrat text-xs lg:text-sm md:text-start">
-                        Below are our privacy & policy, which outline a lot of
-                        goodies. it&apos s our aim to always take our
-                        participant
-                    </p>
+                    <div className="flex items-end">
+                        <p className="pt-5 text-center font-montserrat text-xs lg:text-sm md:text-start">
+                            Below are our privacy & policy, which outline a lot
+                            of goodies. it&apos s our aim to always take our
+                            participant
+                        </p>
+                        <img
+                            src={star}
+                            alt="star"
+                            className="w-4 animate-blink"
+                        />
+                    </div>
 
                     <div className="mt-12 lg:mt-12 border-[1px] border-[#d434fe] px-4 lg:px-14 py-8">
                         <p className="py-2 text-center font-montserrat text-xs lg:text-sm leading-6 lg:leading-7 md:text-start">
@@ -70,6 +78,12 @@ const PrivacyPolicy = () => {
                         </div>
                     </div>
                 </div>
+
+                <img
+                    src={star}
+                    alt="star"
+                    className="w-4 animate-blink relative right-24 top-14"
+                />
 
                 <figure className="relative mt-8 flex flex-col items-center justify-center">
                     <img src={shield} alt="shield" />

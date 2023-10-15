@@ -1,5 +1,6 @@
 import cup from "../assets/9486889 1.png";
 import rewards from "../assets/Rewards.png";
+import star from "../assets/star pu.png";
 
 const Prize = () => {
     return (
@@ -10,10 +11,17 @@ const Prize = () => {
                         Prizes and <br />
                         <span className="text-[#d434fe]">Rewards</span>
                     </h1>
+
                     <p className="py-2 font-montserrat text-xs md:text-sm  lg:w-[80%]">
                         Highlight of the prizes or rewards for winners and for
                         participants
                     </p>
+
+                    <img
+                        src={star}
+                        alt="star"
+                        className="w-4 animate-blink ml-auto"
+                    />
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-12 items-center justify-center">

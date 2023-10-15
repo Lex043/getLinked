@@ -15,9 +15,22 @@ export default {
                     "80%": { transform: "scaleY(1.2)" },
                     "100%": { transform: "scaleY(1)" },
                 },
+
+                blink: {
+                    "0%": {
+                        opacity: 1,
+                    },
+                    "50%": {
+                        opacity: 0,
+                    },
+                    "100%": {
+                        opacity: 1,
+                    },
+                },
             },
             animation: {
                 "open-menu": "open-menu 0.5s ease-in-out forwards",
+                blink: "blink 2s infinite ease-in-out",
             },
         },
 

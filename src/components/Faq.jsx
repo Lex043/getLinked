@@ -1,6 +1,7 @@
 import faqImg from "../assets/faqImg.png";
 import plus from "../assets/+.png";
 import questionMark from "../assets/_ (2).png";
+import star from "../assets/star pu.png";
 
 const Faq = () => {
     return (
@@ -8,6 +9,11 @@ const Faq = () => {
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-[4rem] lg:justify-center">
                 <div className="flex flex-col items-center md:justify-center lg:w-[40%] lg:items-start">
                     <div className="text-center lg:text-start">
+                        <img
+                            src={star}
+                            alt="star"
+                            className="w-4 animate-blink"
+                        />
                         <h1 className="font-clashDisplay text-xl lg:text-3xl">
                             Frequently Ask <br />{" "}
                             <span className="text-[#d434fe]">Question</span>

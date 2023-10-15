@@ -1,10 +1,27 @@
 import criteriaImg from "../assets/Img3.webp";
+import star from "../assets/star pu.png";
+import plainStar from "../assets/star.png";
 
 const Criteria = () => {
     return (
-        <section className="mt-5 border-b-[1px] border-gray-700 px-4 lg:px-12">
-            <div className="flex flex-col items-center lg:flex-row md:gap-[4rem] md:py-12">
-                <figure>
+        <section className="mt-5 border-b-[1px] border-gray-700 px-4 lg:px-12 relative">
+            <div className="absolute left-2/4 lg:left-48 lg:top-10">
+                <img
+                    src={star}
+                    alt="star"
+                    className="w-4 lg:w-6 animate-blink"
+                />
+            </div>
+
+            <div className="absolute left-[60%] md:top-1/3 lg:left-[31%] lg:top-2/4">
+                <img
+                    src={plainStar}
+                    alt="a plain star"
+                    className="w-4 lg:w-6 animate-blink"
+                />
+            </div>
+            <div className="flex flex-col gap-2 items-center lg:flex-row lg:gap-[4rem] md:py-12">
+                <figure className="mt-5">
                     <img
                         src={criteriaImg}
                         alt="criteria img"

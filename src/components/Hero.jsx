@@ -21,7 +21,7 @@ const Hero = () => {
                 />
             </div>
 
-            <section className="mt-16 flex flex-col md:mt-8 md:flex-row md:items-center md:justify-between">
+            <section className="mt-16 flex gap-10 md:gap-0 flex-col md:mt-8 md:flex-row md:items-center md:justify-between">
                 <div className="text-center md:text-start px-4 lg:pl-20">
                     <div className="flex items-end justify-center md:justify-start relative">
                         <h1 className="font-clashDisplay text-2xl lg:text-6xl md:text-4xl relative">
@@ -56,12 +56,12 @@ const Hero = () => {
                     <img
                         src={heroDsgn}
                         alt="hero design"
-                        className="absolute lg:h-[600px]"
+                        className="absolute bottom-2 md:h-[370px] lg:h-[600px] opacity-70"
                     />
                     <img
                         src={heroImg}
                         alt="man wearing smart glasses touching virtual screen"
-                        className="lg:h-[600px] "
+                        className="lg:h-[600px]"
                     />
                 </figure>
             </section>

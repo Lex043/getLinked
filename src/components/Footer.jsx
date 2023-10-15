@@ -4,6 +4,7 @@ import facebook from "../assets/facebook.png";
 import linkedin from "../assets/ri_linkedin-fill.png";
 import dialerIcon from "../assets/dialerIcon.png";
 import locationIcon from "../assets/locationIcon (1).png";
+import star from "../assets/star pu.png";
 
 const Footer = () => {
     return (
@@ -81,6 +82,8 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
+
+            <img src={star} alt="star" className="w-4 animate-blink mx-auto" />
 
             <p className="pt-10 text-center font-montserrat text-xs lg:text-sm">
                 All rights reserved. <span>&copy;</span> getLinked Ltd.
