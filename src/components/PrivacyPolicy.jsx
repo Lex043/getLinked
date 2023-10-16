@@ -2,15 +2,23 @@ import privacyImg from "../assets/08 1.png";
 import shield from "../assets/Vector (2).png";
 import listItem from "../assets/list terms.png";
 import star from "../assets/star pu.png";
+import plainStar from "../assets/star.png";
 
 import Button from "./Button";
 
 const PrivacyPolicy = () => {
     return (
-        <section className="mt-14 px-4 lg:pl-[9rem] pb-48">
+        <section className="mt-14 px-10 lg:pl-[9rem] pb-48">
             <div className="flex flex-col items-center lg:items-start gap-6 lg:flex-row lg:gap-[8rem]">
                 <div className="md:w-[70%] lg:w-[40%]">
-                    <header className="text-center md:text-start">
+                    <header className="text-center lg:text-start relative">
+                        <div className="absolute right-10 -top-6 lg:-top-2 lg:right-[13rem]">
+                            <img
+                                src={plainStar}
+                                alt="A Plain Star"
+                                className="w-2 lg:w-4 animate-blink"
+                            />
+                        </div>
                         <h1 className="font-clashDisplay text-xl lg:text-2xl">
                             Privacy Policy and <br />{" "}
                             <span className="text-[#d434fe]">Terms</span>
@@ -21,7 +29,7 @@ const PrivacyPolicy = () => {
                     </header>
 
                     <div className="flex items-end">
-                        <p className="pt-5 text-center font-montserrat text-xs lg:text-sm md:text-start">
+                        <p className="pt-5 text-center font-montserrat text-xs lg:text-sm lg:text-start">
                             Below are our privacy & policy, which outline a lot
                             of goodies. it&apos s our aim to always take our
                             participant
@@ -29,11 +37,19 @@ const PrivacyPolicy = () => {
                         <img
                             src={star}
                             alt="star"
-                            className="w-4 animate-blink"
+                            className="w-4 animate-blink lg:hidden"
                         />
                     </div>
 
-                    <div className="mt-12 lg:mt-12 border-[1px] border-[#d434fe] px-4 lg:px-14 py-8">
+                    <div className="mt-12 lg:mt-12 border-[1px] border-[#d434fe] px-4 lg:px-14 py-8 relative">
+                        <div className="absolute bottom-32 -left-8 lg:-left-20">
+                            <img
+                                src={star}
+                                alt="star"
+                                className="w-4 animate-blink"
+                            />
+                        </div>
+
                         <p className="py-2 text-center font-montserrat text-xs lg:text-sm leading-6 lg:leading-7 md:text-start">
                             At getlinked tech Hackathon 1.0, we value your
                             privacy and we are committed to protecting your
@@ -79,19 +95,42 @@ const PrivacyPolicy = () => {
                     </div>
                 </div>
 
-                <img
-                    src={star}
-                    alt="star"
-                    className="w-4 animate-blink relative right-24 top-14"
-                />
-
                 <figure className="relative mt-8 flex flex-col items-center justify-center">
+                    <div className="absolute -left-6 top-10 md:top-20 lg:-left-24">
+                        <img
+                            src={star}
+                            alt="star"
+                            className="w-4 animate-blink"
+                        />
+                    </div>
                     <img src={shield} alt="shield" />
                     <img
                         src={privacyImg}
                         alt="an unlocked padlock"
                         className="absolute md:right-10 bottom-[-8rem] md:bottom-[-10rem]"
                     />
+                    <div className="absolute top-20 md:top-32 right-14 md:right-20">
+                        <img
+                            src={plainStar}
+                            alt="A Plain Star"
+                            className="w-2 md:w-4 animate-blink"
+                        />
+                    </div>
+
+                    <div className="absolute left-12 -bottom-20">
+                        <img
+                            src={plainStar}
+                            alt="A Plain Star"
+                            className="w-2 md:w-4 animate-blink"
+                        />
+                    </div>
+                    <div className="absolute right-0 -bottom-20">
+                        <img
+                            src={plainStar}
+                            alt="A Plain Star"
+                            className="w-2 md:w-4 animate-blink"
+                        />
+                    </div>
                 </figure>
             </div>
         </section>
