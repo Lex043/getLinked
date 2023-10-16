@@ -74,7 +74,7 @@ const Navbar = () => {
 
                     <Link
                         to="/register"
-                        className="w-28 rounded-sm mt-2  bg-gradient-to-r from-[#d434fe] via-[#d434fe] to-[#903aff] py-2 text-white text-center"
+                        className="w-28 rounded-sm mt-2  bg-gradient-to-r from-[#FF26B9] via-[#d434fe] to-[#903aff] py-2 text-white text-center"
                     >
                         Register
                     </Link>
