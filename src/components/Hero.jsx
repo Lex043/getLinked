@@ -4,12 +4,13 @@ import underlineDsg from "../assets/Vector 4.png";
 import lightSpark from "../assets/1f4a5.png";
 import chain from "../assets/chain-9365116-7621444.png";
 import bulb from "../assets/Creative 1.png";
+import plainStar from "../assets/star.png";
 
 import Button from "./Button";
 
 const Hero = () => {
     return (
-        <section className="pt-4 border-t-[1px]  border-b-[1px] border-gray-700">
+        <section className="pt-4 border-t-[1px]  border-b-[1px] border-gray-700 relative">
             <h1 className="flex justify-end font-montserrat text-[15px] font-bold italic md:text-xl px-4 lg:px-12">
                 Igniting a Revolution in HR Innovation
             </h1>
@@ -18,6 +19,22 @@ const Hero = () => {
                     src={underlineDsg}
                     alt="underline design"
                     className="float-right w-28 md:w-32"
+                />
+            </div>
+
+            <div className="absolute top-12 left-20">
+                <img
+                    src={plainStar}
+                    alt="A Plain Star"
+                    className="w-2 md:w-4 animate-blink"
+                />
+            </div>
+
+            <div className="absolute top-16 right-10 md:left-[22rem] md:top-20 lg:left-[45%]">
+                <img
+                    src={plainStar}
+                    alt="A Plain Star"
+                    className="w-2 md:w-4 animate-blink"
                 />
             </div>
 
@@ -43,7 +60,16 @@ const Hero = () => {
                         chance to win a Big price
                     </p>
 
-                    <Button>Register</Button>
+                    <div className="relative">
+                        <Button>Register</Button>
+                        <div className="absolute top-3 left-[16rem] md:top-14 ">
+                            <img
+                                src={plainStar}
+                                alt="a plain star"
+                                className="w-2 md:w-4 animate-blink"
+                            />
+                        </div>
+                    </div>
                     <div className="py-2 text-xl md:pt-14 md:text-3xl lg:text-5xl font-unica">
                         00<span className="font-montserrat text-[8px]">H</span>{" "}
                         00
