@@ -1,14 +1,48 @@
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import back from "../assets/back.png";
 import instagram from "../assets/mdi_instagram.png";
 import twitter from "../assets/twitter.png";
 import facebook from "../assets/facebook.png";
 import linkedin from "../assets/ri_linkedin-fill.png";
+import sata from "../assets/sata gra.png";
+import plainStar from "../assets/star.png";
 
 const Contact = () => {
+    const [email, setEmail] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [message, setMessage] = useState("");
+
+    const body = {
+        email: email,
+        phone_number: phoneNumber,
+        first_name: firstName,
+        message: message,
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        fetch("https://backend.getlinked.ai/hackathon/contact-form", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify(body),
+        })
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
+
     return (
-        <section className="px-4 pt-10 lg:pt-0 pb-6">
+        <section className="px-8 pt-10 lg:pt-0 pb-6">
             <div className="hidden lg:block">
                 <Navbar />
             </div>
@@ -16,7 +50,14 @@ const Contact = () => {
                 <img src={back} alt="back icon" />
             </Link>
 
-            <section className="lg:flex lg:gap-32 lg:w-[70%] lg:mx-auto lg:mt-20">
+            <section className="lg:flex lg:gap-32 lg:w-[70%] lg:mx-auto lg:mt-20 relative">
+                <div className="absolute left-[50%] lg:left-0 -top-10">
+                    <img
+                        src={sata}
+                        alt="a purple star"
+                        className="w-2 md:w-4 animate-blink"
+                    />
+                </div>
                 <div className="hidden lg:block lg:mt-12">
                     <h1 className="font-clashDisplay text-xl text-[#d434fe]">
                         Get in touch
@@ -51,8 +92,15 @@ const Contact = () => {
                         </figure>
                     </div>
                 </div>
+                <div className="absolute right-10 lg:-top-12 lg:right-20">
+                    <img
+                        src={plainStar}
+                        alt="a purple star"
+                        className="w-3 md:w-4 animate-blink"
+                    />
+                </div>
                 <div className="mt-10 lg:mt-0">
-                    <div className=" lg:rounded-xl lg:bg-[#1C152E] lg:px-20 lg:py-10 lg:shadow-xl">
+                    <div className=" lg:rounded-xl lg:bg-[#1C152E] lg:px-10 lg:py-8 lg:shadow-xl">
                         <header>
                             <h1 className="text-[#d434fe] font-clashDisplay text-xl ">
                                 Questions or need assistance? <br /> Let us know
@@ -63,46 +111,61 @@ const Contact = () => {
                                 event.
                             </p>
                         </header>
-                        <form className="mt-6 flex flex-col gap-6 justify-center">
-                            <input
-                                type="text"
-                                placeholder="Team's Name"
-                                className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2 lg:hidden"
-                            />
-
+                        <form
+                            onSubmit={handleSubmit}
+                            className="mt-6 flex flex-col gap-6 justify-center relative"
+                        >
                             <input
                                 type="text"
                                 placeholder="First Name"
-                                className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2 hidden lg:block"
+                                value={firstName}
+                                onChange={(e) => setFirstName(e.target.value)}
+                                className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2"
                             />
 
-                            <input
-                                type="text"
-                                placeholder="Topic"
-                                className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2 lg:hidden"
-                            />
                             <input
                                 type="email"
                                 placeholder="Email"
-                                className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2 lg:hidden"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2"
                             />
 
                             <input
-                                type="email"
-                                placeholder="Mail"
-                                className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2 hidden lg:block"
+                                type="number"
+                                placeholder="Phone Number"
+                                value={phoneNumber}
+                                onChange={(e) => setPhoneNumber(e.target.value)}
+                                className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2"
                             />
+
                             <textarea
                                 name=""
                                 id=""
                                 cols="20"
                                 rows="10"
                                 placeholder="Message"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
                                 className="resize-none h-28 bg-transparent border-[1px] text-white outline-none rounded-md pl-4 pt-2"
                             ></textarea>
+                            <div className="absolute -right-4 bottom-20 lg:-right-24 lg:-bottom-5">
+                                <img
+                                    src={plainStar}
+                                    alt="a purple star"
+                                    className="w-2 md:w-4 animate-blink"
+                                />
+                            </div>
                             <button className="w-[120px] rounded-md bg-gradient-to-r from-[#d434fe] via-[#d434fe] to-[#903aff] py-3 font-montserrat text-sm text-white mx-auto">
                                 Submit
                             </button>
+                            <div className="absolute bottom-5 lg:-left-12 lg:bottom-16">
+                                <img
+                                    src={sata}
+                                    alt="a purple star"
+                                    className="w-2 md:w-4 animate-blink"
+                                />
+                            </div>
                         </form>
                     </div>
                 </div>

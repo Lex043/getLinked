@@ -1,17 +1,69 @@
+import useSWR from "swr";
+import { useState } from "react";
+
 import Navbar from "../components/Navbar";
 import regImg from "../assets/3d-graphic-designer-showing-thumbs-up-png 1.png";
 import line from "../assets/Line 9.png";
 import femaleEmoji from "../assets/1f6b6-2640.png";
 import maleEmoji from "../assets/image_processing20200511-10310-13mnlsx.png";
 
+import Modal from "../components/Modal";
+
 const Register = () => {
+    const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [teamName, setTeamName] = useState("");
+    const [projectTopic, setProjectTopic] = useState("");
+    const [category, setCategory] = useState("");
+    const [groupSize, setGroupSize] = useState("");
+    const [regError, setRegError] = useState("");
+
+    //Modal
+    const [modal, setModal] = useState(false);
+
+    const body = {
+        email: email,
+        phone_number: phoneNumber,
+        team_name: teamName,
+        group_size: groupSize,
+        project_topic: projectTopic,
+        category: category,
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        fetch("https://backend.getlinked.ai/hackathon/registration", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify(body),
+        }).then((res) => {
+            if (!res.ok) {
+                setRegError(res.statusText);
+            } else {
+                setRegError("");
+                setModal(!modal);
+            }
+        });
+    };
+
+    // fetch category
+    const fetcher = (...args) => fetch(...args).then((res) => res.json());
+    const { data, error } = useSWR(
+        "https://backend.getlinked.ai/hackathon/categories-list",
+        fetcher
+    );
+
     return (
         <section>
             <div className="hidden lg:block">
                 <Navbar />
             </div>
 
-            <section className="px-4 pt-8 lg:flex lg:items-center lg:gap-4 lg:pt-6">
+            <section className="px-4 py-8 lg:flex lg:items-center lg:gap-4 lg:pt-6">
                 <section className="lg:w-2/5">
                     <h1 className="font-clashDisplay text-xl text-[#d434fe] lg:hidden">
                         Register
@@ -50,21 +102,32 @@ const Register = () => {
                         <h1 className="uppercase pt-2">create your account</h1>
                     </header>
 
-                    <form className="mt-6 flex flex-col gap-6 justify-center font-montserrat text-sm">
+                    <form
+                        onSubmit={handleSubmit}
+                        className="mt-6 flex flex-col gap-6 justify-center font-montserrat text-sm"
+                    >
                         <section className="flex flex-col lg:flex-row gap-6">
                             <div className="flex flex-col gap-2 lg:w-1/2">
                                 <label htmlFor="">Team&apos;s Name</label>
                                 <input
                                     type="text"
+                                    value={teamName}
+                                    onChange={(e) =>
+                                        setTeamName(e.target.value)
+                                    }
                                     placeholder="Enter the name of your group"
                                     className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2"
                                 />
                             </div>
 
                             <div className="flex flex-col gap-2 lg:w-1/2">
-                                <label htmlFor="">Phone</label>
+                                <label>Phone</label>
                                 <input
                                     type="number"
+                                    value={phoneNumber}
+                                    onChange={(e) =>
+                                        setPhoneNumber(e.target.value)
+                                    }
                                     placeholder="Enter your phone number"
                                     className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2"
                                 />
@@ -73,18 +136,24 @@ const Register = () => {
 
                         <section className="flex flex-col lg:flex-row gap-6">
                             <div className="flex flex-col gap-2 lg:w-1/2">
-                                <label htmlFor="">Email</label>
+                                <label>Email</label>
                                 <input
                                     type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     placeholder="Enter your email address"
                                     className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2"
                                 />
                             </div>
 
                             <div className="flex flex-col gap-2 lg:w-1/2">
-                                <label htmlFor="">Project Topic</label>
+                                <label>Project Topic</label>
                                 <input
                                     type="text"
+                                    value={projectTopic}
+                                    onChange={(e) =>
+                                        setProjectTopic(e.target.value)
+                                    }
                                     placeholder="What is your group project topic"
                                     className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2"
                                 />
@@ -92,17 +161,43 @@ const Register = () => {
                         </section>
 
                         <div className="flex gap-6">
-                            <div className="flex flex-col gap-2 w-1/2">
-                                <label htmlFor="">Category</label>
-                                <select className="bg-transparent border-[1px] text-white outline-none rounded-md pl-2 py-2">
+                            <div className="flex flex-col gap-2 w-3/5">
+                                <label>Category</label>
+                                <select
+                                    value={category}
+                                    onChange={(e) =>
+                                        setCategory(e.target.value)
+                                    }
+                                    className="bg-[#1C152E] border-[1px] text-white text-xs outline-none rounded-md pl-2 py-2"
+                                >
                                     <option>Select your category</option>
+                                    {data &&
+                                        data.map((category) => (
+                                            <option key={category.id}>
+                                                {category.id}
+                                            </option>
+                                        ))}
+                                    {error && (
+                                        <option>
+                                            failed to fetch category
+                                        </option>
+                                    )}
                                 </select>
                             </div>
 
                             <div className="flex flex-col gap-2 w-1/2">
-                                <label htmlFor="">Group Size</label>
-                                <select className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2">
+                                <label>Group Size</label>
+                                <select
+                                    value={groupSize}
+                                    onChange={(e) =>
+                                        setGroupSize(e.target.value)
+                                    }
+                                    className="bg-[#1C152E] border-[1px] text-white text-xs outline-none rounded-md pl-4 py-2"
+                                >
                                     <option>Select</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
                                 </select>
                             </div>
                         </div>
@@ -121,7 +216,9 @@ const Register = () => {
                                 </span>
                             </p>
                         </div>
-
+                        <p className="text-red-600 6e0t-[10px] italic text-center">
+                            {regError && regError}
+                        </p>
                         <button className="w-[120px] rounded-md bg-gradient-to-r from-[#d434fe] via-[#d434fe] to-[#903aff] py-3 font-montserrat text-sm text-white mx-auto lg:hidden">
                             Submit
                         </button>
@@ -130,6 +227,7 @@ const Register = () => {
                         </button>
                     </form>
                 </section>
+                {modal && <Modal />}
             </section>
         </section>
     );
