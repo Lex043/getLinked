@@ -6,7 +6,10 @@ import regImg from "../assets/3d-graphic-designer-showing-thumbs-up-png 1.png";
 import line from "../assets/Line 9.png";
 import femaleEmoji from "../assets/1f6b6-2640.png";
 import maleEmoji from "../assets/image_processing20200511-10310-13mnlsx.png";
+import sata from "../assets/sata gra.png";
+import plainStar from "../assets/star.png";
 
+// component
 import Modal from "../components/Modal";
 
 const Register = () => {
@@ -40,14 +43,18 @@ const Register = () => {
                 Accept: "application/json",
             },
             body: JSON.stringify(body),
-        }).then((res) => {
-            if (!res.ok) {
-                setRegError(res.statusText);
-            } else {
-                setRegError("");
-                setModal(!modal);
-            }
-        });
+        })
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error("something went wrong");
+                } else {
+                    setRegError("");
+                    setModal(!modal);
+                }
+            })
+            .catch((e) => {
+                setRegError(e.message);
+            });
     };
 
     // fetch category
@@ -63,21 +70,60 @@ const Register = () => {
                 <Navbar />
             </div>
 
-            <section className="px-4 py-8 lg:flex lg:items-center lg:gap-4 lg:pt-6">
-                <section className="lg:w-2/5">
+            <section className="px-6 py-8 lg:flex lg:items-center lg:gap-4 lg:pt-6">
+                <section className="lg:w-2/5 relative">
                     <h1 className="font-clashDisplay text-xl text-[#d434fe] lg:hidden">
                         Register
                     </h1>
-                    <figure>
+                    <figure className="relative">
                         <img src={regImg} alt="" />
+
+                        <div className="hidden lg:block absolute left-24 top-5">
+                            <img
+                                src={sata}
+                                alt="a purple star"
+                                className="w-3 animate-blink"
+                            />
+                        </div>
+
+                        <div className="hidden lg:block absolute right-10 bottom-32">
+                            <img
+                                src={sata}
+                                alt="a purple star"
+                                className="w-2 md:w-4 animate-blink"
+                            />
+                        </div>
+
+                        <div className="absolute left-24 bottom-0 hidden lg:block">
+                            <img
+                                src={plainStar}
+                                alt="a plain star"
+                                className="w-3 md:w-4 animate-blink"
+                            />
+                        </div>
                     </figure>
+
+                    <div className="absolute right-0 top-36 lg:hidden">
+                        <img
+                            src={sata}
+                            alt="a purple star"
+                            className="w-3 md:w-4 animate-blink"
+                        />
+                    </div>
                 </section>
 
                 <section className="lg:w-[48%]  lg:rounded-xl lg:bg-[#1C152E] lg:px-12 lg:py-10 lg:shadow-xl">
-                    <header className="font-montserrat text-center lg:text-start">
+                    <header className="font-montserrat text-center lg:text-start relative">
                         <h1 className="font-clashDisplay text-2xl text-[#d434fe] hidden lg:block lg:pb-10">
                             Register
                         </h1>
+                        <div className="hidden lg:block lg:absolute lg:right-48 lg:-top-6">
+                            <img
+                                src={plainStar}
+                                alt="a plain star"
+                                className="w-3 md:w-4 animate-blink"
+                            />
+                        </div>
                         <div className="text-xs flex gap-2 justify-center lg:justify-start relative">
                             <span>Be part of this movement! </span>
                             <figure>
@@ -106,7 +152,14 @@ const Register = () => {
                         onSubmit={handleSubmit}
                         className="mt-6 flex flex-col gap-6 justify-center font-montserrat text-sm"
                     >
-                        <section className="flex flex-col lg:flex-row gap-6">
+                        <section className="flex flex-col lg:flex-row gap-6 relative">
+                            <div className="absolute -left-4 top-6 lg:hidden">
+                                <img
+                                    src={plainStar}
+                                    alt="a purple star"
+                                    className="w-3 md:w-4 animate-blink"
+                                />
+                            </div>
                             <div className="flex flex-col gap-2 lg:w-1/2">
                                 <label htmlFor="">Team&apos;s Name</label>
                                 <input
@@ -124,6 +177,7 @@ const Register = () => {
                                 <label>Phone</label>
                                 <input
                                     type="number"
+                                    required
                                     value={phoneNumber}
                                     onChange={(e) =>
                                         setPhoneNumber(e.target.value)
@@ -139,6 +193,7 @@ const Register = () => {
                                 <label>Email</label>
                                 <input
                                     type="email"
+                                    required
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="Enter your email address"
@@ -185,8 +240,15 @@ const Register = () => {
                                 </select>
                             </div>
 
-                            <div className="flex flex-col gap-2 w-1/2">
+                            <div className="flex flex-col gap-2 w-1/2 relative">
                                 <label>Group Size</label>
+                                <div className="absolute right-0 lg:hidden">
+                                    <img
+                                        src={sata}
+                                        alt="a purple star"
+                                        className="w-2 md:w-4 animate-blink"
+                                    />
+                                </div>
                                 <select
                                     value={groupSize}
                                     onChange={(e) =>

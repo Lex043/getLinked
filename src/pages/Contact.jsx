@@ -126,6 +126,7 @@ const Contact = () => {
                             <input
                                 type="email"
                                 placeholder="Email"
+                                required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 className="bg-transparent border-[1px] text-white outline-none rounded-md pl-4 py-2"
