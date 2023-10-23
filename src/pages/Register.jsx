@@ -1,5 +1,6 @@
 import useSWR from "swr";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import regImg from "../assets/3d-graphic-designer-showing-thumbs-up-png 1.png";
@@ -75,9 +76,12 @@ const Register = () => {
 
             <section className="px-6 py-8 lg:flex lg:items-center lg:gap-4 lg:pt-6 relative">
                 <section className="lg:w-2/5 relative">
-                    <h1 className="font-clashDisplay text-xl text-[#d434fe] lg:hidden">
+                    <Link
+                        to="/"
+                        className="font-clashDisplay text-xl text-[#d434fe] lg:hidden relative z-30"
+                    >
                         Register
-                    </h1>
+                    </Link>
                     <figure className="relative">
                         <img src={regImg} alt="" />
 
