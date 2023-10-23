@@ -3,12 +3,13 @@ import shield from "../assets/Vector (2).png";
 import listItem from "../assets/list terms.png";
 import star from "../assets/star pu.png";
 import plainStar from "../assets/star.png";
+import purpleTop from "../assets/Purple-Lens-Flare-top.png";
 
 import Button from "./Button";
 
 const PrivacyPolicy = () => {
     return (
-        <section className="mt-14 px-10 lg:pl-[9rem] pb-48">
+        <section className="mt-14 px-10 lg:pl-[9rem] pb-48 relative">
             <div className="flex flex-col items-center lg:items-start gap-6 lg:flex-row lg:gap-[8rem]">
                 <div className="md:w-[70%] lg:w-[40%]">
                     <header className="text-center lg:text-start relative">
@@ -41,7 +42,7 @@ const PrivacyPolicy = () => {
                         />
                     </div>
 
-                    <div className="mt-12 lg:mt-12 border-[1px] border-[#d434fe] px-4 lg:px-14 py-8 relative">
+                    <div className="mt-12 lg:mt-12 border-[1px] border-[#d434fe] px-4 lg:px-14 py-8 relative z-30">
                         <div className="absolute bottom-32 -left-8 lg:-left-20">
                             <img
                                 src={star}
@@ -133,6 +134,10 @@ const PrivacyPolicy = () => {
                     </div>
                 </figure>
             </div>
+
+            <span className="absolute bottom-[30rem] lg:-bottom-52 left-0 mix-blend-hard-light">
+                <img src={purpleTop} alt="purple blur" />
+            </span>
         </section>
     );
 };

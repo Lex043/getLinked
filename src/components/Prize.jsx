@@ -2,10 +2,14 @@ import cup from "../assets/9486889 1.png";
 import rewards from "../assets/Rewards.png";
 import star from "../assets/sata gra.png";
 import plainStar from "../assets/star.png";
+import purpleBlurTop from "../assets/Purple-Lens-Flare-top.png";
+import purpleRight from "../assets/Purple-Lens-Flare-right.png";
+import purpleSmRight from "../assets/Purple-Lens-Flare-sm-right.png";
+import purpleBlurCenter from "../assets/Purple-Lens-Flare-center.png";
 
 const Prize = () => {
     return (
-        <section className="my-10 px-4 lg:px-16 bg-[#110B21] pt-10 pb-14 lg:pb-20">
+        <section className="my-10 px-4 lg:px-16 bg-[#110B21] pt-10 pb-14 lg:pb-20 relative">
             <div className="lg:flex lg:flex-col lg:gap-10 relative">
                 <div className="lg:absolute lg:top-24 lg:left-52">
                     <img
@@ -34,7 +38,7 @@ const Prize = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-12 items-center justify-center relative">
+                <div className="flex flex-col md:flex-row gap-12 items-center justify-center relative z-30">
                     <figure>
                         <img src={cup} alt="prize and rewards cup" />
                     </figure>
@@ -68,6 +72,24 @@ const Prize = () => {
                     </div>
                 </div>
             </div>
+
+            <span className="lg:hidden absolute mix-blend-hard-light left-0 top-0">
+                <img src={purpleBlurTop} alt="purple blur" />
+            </span>
+
+            <span className="absolute lg:hidden -bottom-12 right-0 mix-blend-hard-light">
+                <img src={purpleRight} alt="purple blur" />
+            </span>
+
+            {/* Desktop mode */}
+
+            <span className="absolute hidden lg:block top-20 right-0 mix-blend-hard-light">
+                <img src={purpleSmRight} alt="purple blur" />
+            </span>
+
+            <span className="absolute hidden lg:block -bottom-14 left-0 mix-blend-hard-light">
+                <img src={purpleBlurCenter} alt="purple blur" />
+            </span>
         </section>
     );
 };

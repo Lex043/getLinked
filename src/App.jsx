@@ -7,7 +7,7 @@ import { Routes, Route } from "react-router-dom";
 
 const App = () => {
     return (
-        <main className="min-h-screen bg-[#150e28] text-white">
+        <main className="min-h-screen bg-[#150e28] text-white overflow-hidden">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />

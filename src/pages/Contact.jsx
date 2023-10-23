@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import back from "../assets/back.png";
 import instagram from "../assets/mdi_instagram.png";
 import twitter from "../assets/twitter.png";
@@ -8,6 +10,9 @@ import facebook from "../assets/facebook.png";
 import linkedin from "../assets/ri_linkedin-fill.png";
 import sata from "../assets/sata gra.png";
 import plainStar from "../assets/star.png";
+
+import purpleRightContact from "../assets/Purple-Lens-Flare-right-contact.png";
+import purpleLeftContact from "../assets/Purple-Lens-Flare-left-contact.png";
 
 const Contact = () => {
     const [email, setEmail] = useState("");
@@ -34,23 +39,33 @@ const Contact = () => {
             body: JSON.stringify(body),
         })
             .then((res) => {
-                console.log(res);
+                if (res.ok) {
+                    toast.success("success!", {
+                        position: toast.POSITION.BOTTOM_RIGHT,
+                    });
+                    setEmail("");
+                    setFirstName("");
+                    setPhoneNumber("");
+                    setMessage("");
+                } else {
+                    toast.error("Failed. Check network.");
+                }
             })
             .catch((err) => {
-                console.log(err);
+                console.log(err.message);
             });
     };
 
     return (
-        <section className="px-8 pt-10 lg:pt-0 pb-6">
+        <section className="px-8 pt-10 lg:pt-0 pb-6 relative">
             <div className="hidden lg:block">
                 <Navbar />
             </div>
-            <Link to="/" className="lg:hidden">
+            <Link to="/" className="lg:hidden relative z-30">
                 <img src={back} alt="back icon" />
             </Link>
 
-            <section className="lg:flex lg:gap-32 lg:w-[70%] lg:mx-auto lg:mt-20 relative">
+            <section className="lg:flex lg:gap-32 lg:w-[70%] lg:mx-auto lg:mt-20 relative z-30">
                 <div className="absolute left-[50%] lg:left-0 -top-10">
                     <img
                         src={sata}
@@ -99,7 +114,7 @@ const Contact = () => {
                         className="w-3 md:w-4 animate-blink"
                     />
                 </div>
-                <div className="mt-10 lg:mt-0">
+                <div className="mt-10 lg:mt-0 lg:w-[50%]">
                     <div className=" lg:rounded-xl lg:bg-[#1C152E] lg:px-10 lg:py-8 lg:shadow-xl">
                         <header>
                             <h1 className="text-[#d434fe] font-clashDisplay text-xl ">
@@ -160,6 +175,7 @@ const Contact = () => {
                             <button className="w-[120px] rounded-md bg-gradient-to-r from-[#d434fe] via-[#d434fe] to-[#903aff] py-3 font-montserrat text-sm text-white mx-auto">
                                 Submit
                             </button>
+                            <ToastContainer />
                             <div className="absolute bottom-5 lg:-left-12 lg:bottom-16">
                                 <img
                                     src={sata}
@@ -181,6 +197,14 @@ const Contact = () => {
                     <img src={linkedin} alt="linkedin" />
                 </figure>
             </div>
+
+            <span className="absolute top-0 left-0 mix-blend-hard-light">
+                <img src={purpleRightContact} alt="purple blur" />
+            </span>
+
+            <span className="absolute hidden lg:block -bottom-16 right-0 mix-blend-hard-light">
+                <img src={purpleLeftContact} alt="purple blur" />
+            </span>
         </section>
     );
 };

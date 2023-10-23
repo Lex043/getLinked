@@ -1,6 +1,9 @@
 import criteriaImg from "../assets/Img3.webp";
 import star from "../assets/star pu.png";
 import plainStar from "../assets/star.png";
+import purpleTop from "../assets/Purple-Lens-Flare-top.png";
+import purpleRight from "../assets/Purple-Lens-Flare-right.png";
+import purpleRightBg from "../assets/Purple-Lens-Flare-bg-right.png";
 
 const Criteria = () => {
     return (
@@ -20,7 +23,7 @@ const Criteria = () => {
                     className="w-4 lg:w-6 animate-blink"
                 />
             </div>
-            <div className="flex flex-col gap-2 items-center lg:flex-row lg:gap-[4rem] md:py-12">
+            <div className="flex flex-col gap-4 items-center lg:flex-row lg:gap-[4rem] md:py-12 relative z-30">
                 <figure className="mt-5">
                     <img
                         src={criteriaImg}
@@ -95,6 +98,19 @@ const Criteria = () => {
                     </div>
                 </div>
             </div>
+
+            <span className="absolute top-10 lg left-0 mix-blend-hard-light">
+                <img src={purpleTop} alt="purple blur" />
+            </span>
+
+            <span className="absolute lg:hidden -bottom-10 right-0 mix-blend-hard-light">
+                <img src={purpleRight} alt="purple blur" />
+            </span>
+
+            {/* Desktop mode */}
+            <span className="absolute hidden lg:block top-24 right-0 mix-blend-hard-light">
+                <img src={purpleRightBg} alt="purple blur" />
+            </span>
         </section>
     );
 };

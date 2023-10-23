@@ -26,7 +26,10 @@ const Navbar = () => {
     return (
         <section>
             <section className="flex items-center justify-between px-4 lg:px-16 py-3 md:py-4">
-                <Link to="/" className="font-clashDisplay text-2xl lg:text-3xl">
+                <Link
+                    to="/"
+                    className="font-clashDisplay text-2xl lg:text-3xl relative z-30"
+                >
                     <span>get</span>
                     <span className="text-[#d434fe]">linked</span>
                 </Link>

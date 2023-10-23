@@ -9,6 +9,9 @@ import maleEmoji from "../assets/image_processing20200511-10310-13mnlsx.png";
 import sata from "../assets/sata gra.png";
 import plainStar from "../assets/star.png";
 
+import purpleRightContact from "../assets/Purple-Lens-Flare-right-contact.png";
+import purpleLeftContact from "../assets/Purple-Lens-Flare-left-contact.png";
+
 // component
 import Modal from "../components/Modal";
 
@@ -70,7 +73,7 @@ const Register = () => {
                 <Navbar />
             </div>
 
-            <section className="px-6 py-8 lg:flex lg:items-center lg:gap-4 lg:pt-6">
+            <section className="px-6 py-8 lg:flex lg:items-center lg:gap-4 lg:pt-6 relative">
                 <section className="lg:w-2/5 relative">
                     <h1 className="font-clashDisplay text-xl text-[#d434fe] lg:hidden">
                         Register
@@ -290,6 +293,18 @@ const Register = () => {
                     </form>
                 </section>
                 {modal && <Modal />}
+
+                <span className="absolute top-0 left-0 mix-blend-hard-light">
+                    <img
+                        src={purpleRightContact}
+                        alt="purple blur"
+                        className="md:w-[50%] lg:w-[85%]"
+                    />
+                </span>
+
+                <span className="absolute hidden lg:block -bottom-8 right-0 mix-blend-hard-light">
+                    <img src={purpleLeftContact} alt="purple blur" />
+                </span>
             </section>
         </section>
     );

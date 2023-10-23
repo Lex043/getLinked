@@ -1,12 +1,16 @@
 import rulesImg from "../assets/rulesImg.png";
 import plainStar from "../assets/star.png";
+import purpleTop from "../assets/Purple-Lens-Flare-top.png";
+import purpleRight from "../assets/Purple-Lens-Flare-right.png";
+import purpleBlurCenter from "../assets/Purple-Lens-Flare-center.png";
+import purpleSmRight from "../assets/Purple-Lens-Flare-sm-right.png";
 
 /* eslint-disable react/no-unescaped-entities */
 
 const Rules = () => {
     return (
-        <section className="border-b-[1px] border-gray-700 px-4 lg:px-20 ">
-            <div className="flex flex-col-reverse items-center lg:flex-row lg:gap-[3rem]">
+        <section className="border-b-[1px] border-gray-700 px-4 lg:px-20 relative">
+            <div className="flex flex-col-reverse items-center lg:flex-row lg:gap-[3rem] relative z-30">
                 <div className="text-center lg:w-[50%] lg:text-start relative">
                     <h1 className="font-clashDisplay text-xl lg:text-3xl">
                         Rules and <br />{" "}
@@ -46,6 +50,23 @@ const Rules = () => {
                     </div>
                 </figure>
             </div>
+
+            <span className="absolute lg:hidden -top-20 left-0 mix-blend-hard-light">
+                <img src={purpleTop} alt="purple blur" />
+            </span>
+
+            {/* Desktop mode */}
+            <span className="absolute hidden lg:block -bottom-14 left-0 mix-blend-hard-light">
+                <img src={purpleBlurCenter} alt="purple blur" />
+            </span>
+
+            <span className="absolute lg:hidden bottom-10 right-0 mix-blend-hard-light">
+                <img src={purpleRight} alt="purple blur" />
+            </span>
+
+            <span className="absolute hidden lg:block top-20 right-0 mix-blend-hard-light">
+                <img src={purpleSmRight} alt="purple blur" />
+            </span>
         </section>
     );
 };

@@ -5,13 +5,15 @@ import lightSpark from "../assets/1f4a5.png";
 import chain from "../assets/chain-9365116-7621444.png";
 import bulb from "../assets/Creative 1.png";
 import plainStar from "../assets/star.png";
+import purpleBlur1 from "../assets/Purple-Lens-Flare-top.png";
+import purpleBlurCenter from "../assets/Purple-Lens-Flare-center.png";
 
-import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     return (
         <section className="pt-4 border-t-[1px]  border-b-[1px] border-gray-700 relative">
-            <h1 className="flex justify-end font-montserrat text-[15px] font-bold italic md:text-xl px-4 lg:px-12">
+            <h1 className="flex justify-end font-montserrat text-[15px] font-bold italic md:text-xl px-4 lg:px-10">
                 Igniting a Revolution in HR Innovation
             </h1>
             <div className="w-full px-4 lg:px-12">
@@ -38,8 +40,8 @@ const Hero = () => {
                 />
             </div>
 
-            <section className="mt-16 flex gap-10 md:gap-0 flex-col md:mt-8 md:flex-row md:items-center md:justify-between">
-                <div className="text-center md:text-start px-4 lg:pl-20">
+            <section className="mt-10 flex gap-10 md:gap-0 flex-col md:mt-8 md:flex-row md:items-center md:justify-between">
+                <div className="text-center md:text-start px-4 lg:pl-20 relative z-30">
                     <div className="flex items-end justify-center md:justify-start relative">
                         <h1 className="font-clashDisplay text-2xl lg:text-6xl md:text-4xl relative">
                             getlinked Tech <br /> Hackaction{" "}
@@ -55,13 +57,19 @@ const Hero = () => {
                             <img src={lightSpark} alt="light spark" />
                         </figure>
                     </div>
-                    <p className="py-2 font-montserrat text-xs md:pb-6 md:text-sm lg:w-[72%]">
+                    <p className="py-4 font-montserrat text-xs md:pb-6 md:text-sm lg:w-[72%]">
                         Participate in getlinked tech Hackathon 2023 stand a
                         chance to win a Big price
                     </p>
 
                     <div className="relative">
-                        <Button>Register</Button>
+                        <Link
+                            to="/register"
+                            className="px-10 lg:w-[100px] rounded-[4px] bg-gradient-to-r from-[#FF26B9] via-[#d434fe] to-[#903aff]
+                         py-3 font-montserrat text-xs text-white relative z-30"
+                        >
+                            Register
+                        </Link>
                         <div className="absolute top-3 left-[16rem] md:top-14 ">
                             <img
                                 src={plainStar}
@@ -70,7 +78,7 @@ const Hero = () => {
                             />
                         </div>
                     </div>
-                    <div className="py-2 text-xl md:pt-14 md:text-3xl lg:text-5xl font-unica">
+                    <div className="py-4 text-xl md:pt-14 md:text-3xl lg:text-5xl font-unica">
                         00<span className="font-montserrat text-[8px]">H</span>{" "}
                         00
                         <span className="font-montserrat text-[8px]">M</span> 00
@@ -91,6 +99,12 @@ const Hero = () => {
                     />
                 </figure>
             </section>
+            <span className="lg:hidden absolute mix-blend-hard-light left-0 top-2">
+                <img src={purpleBlur1} alt="purple blur" />
+            </span>
+            <span className="absolute hidden lg:block mix-blend-hard-light bottom-32 left-14">
+                <img src={purpleBlurCenter} alt="purple blur" />
+            </span>
         </section>
     );
 };
