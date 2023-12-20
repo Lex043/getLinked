@@ -119,7 +119,7 @@ const Register = () => {
                     </div>
                 </section>
 
-                <section className="lg:w-[48%]  lg:rounded-xl lg:bg-[#1C152E] lg:px-12 lg:py-10 lg:shadow-xl">
+                <section className="lg:w-[48%]  lg:rounded-xl lg:bg-[#1C152E] lg:px-12 lg:py-10 lg:shadow-xl z-50">
                     <header className="font-montserrat text-center lg:text-start relative">
                         <h1 className="font-clashDisplay text-2xl text-[#d434fe] hidden lg:block lg:pb-10">
                             Register
@@ -148,7 +148,7 @@ const Register = () => {
                                 <img
                                     src={line}
                                     alt="dotted line"
-                                    className="w-16 md:w-20  absolute top-3"
+                                    className="w-16 md:w-20 absolute top-3"
                                 />
                             </figure>
                         </div>
